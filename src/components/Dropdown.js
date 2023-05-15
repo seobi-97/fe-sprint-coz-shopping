@@ -21,8 +21,9 @@ function Dropdown() {
   return (
     <Container>
       <Menu>MyPage</Menu>
-
-      <Menu>product</Menu>
+      <Link>
+        <Menu>product</Menu>
+      </Link>
 
       <Menu>Bookmark</Menu>
     </Container>
