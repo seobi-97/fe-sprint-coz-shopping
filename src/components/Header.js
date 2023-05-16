@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Logo from "../images/logo.svg";
 import Hamburger from "../images/hamburger.svg";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -16,6 +17,10 @@ const Container = styled.div`
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
   justify-content: space-between;
   align-items: center;
+  a {
+    color: black;
+    text-decoration: none;
+  }
 `;
 const LogoContainer = styled.div`
   display: flex;
@@ -46,8 +51,12 @@ function Header({ handleClick }) {
   return (
     <Container>
       <LogoContainer>
-        <img src={Logo} alt="logo" />
-        <p>COZ Shopping</p>
+        <Link to="/">
+          <img src={Logo} alt="logo" />
+        </Link>
+        <Link to="/">
+          <p>COZ Shopping</p>
+        </Link>
       </LogoContainer>
       <Menu>
         <img onClick={handleClick} src={Hamburger} alt="hamburger" />
