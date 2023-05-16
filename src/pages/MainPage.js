@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import Dropdown from "../components/Dropdown";
+import Footer from "../components/Footer";
 
 function MainPage() {
   const [isopen, setOpen] = useState(false);
@@ -11,6 +12,7 @@ function MainPage() {
     <>
       <Header handleClick={() => handleClick()} />
       {isopen ? <Dropdown /> : <></>}
+      <Footer />
     </>
   );
 }
