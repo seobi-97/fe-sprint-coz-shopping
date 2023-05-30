@@ -45,7 +45,7 @@ const Icon2 = styled.img`
 const Icon = styled.img`
   margin-right: 6px;
 `;
-function Dropdown() {
+function Dropdown({ primary, label, ...reset }) {
   return (
     <>
       <Icon2 src={polygon} />
